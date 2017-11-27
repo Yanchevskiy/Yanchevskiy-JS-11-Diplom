@@ -294,7 +294,7 @@ const actorDict = {
     'o': Coin,
     '=': HorizontalFireball,
     '|': VerticalFireball
-}
+};
 
 const parser = new LevelParser(actorDict);
 

@@ -296,7 +296,7 @@ const actorDict = {
     '|': VerticalFireball
 };
 
-const parser = new LevelParser(actorDict);
+
 
 
 

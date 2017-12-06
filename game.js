@@ -281,6 +281,7 @@ const actorDict = {
     '|': VerticalFireball
 }
 
+/*
 const levels = [
     [
       '     v                 ',
@@ -321,6 +322,17 @@ const levels = [
 const parser = new LevelParser(actorDict);
   runGame(levels,parser,DOMDisplay)
   .then(() => alert('Вы выиграли приз!'));
+
+*/
+
+const parser = new LevelParser(actorDict);
+
+loadLevels().then(levelsStr => {
+  let levels = JSON.parse(levelsStr);
+  return runGame(levels, parser, DOMDisplay);
+}).then(() => {
+  alert('Ты крут =) Победа твоя!')
+});
 
 
 

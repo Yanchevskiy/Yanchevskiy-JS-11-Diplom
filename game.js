@@ -281,54 +281,10 @@ const actorDict = {
     '|': VerticalFireball
 }
 
-/*
-const levels = [
-    [
-      '     v                 ',
-      '                       ',
-      '                       ',
-      '                       ',
-      '                       ',
-      ' |                     ',
-      ' o                  o  ',
-      ' x                  x  ',
-      ' x          o o  =  x  ',
-      ' x  @       xxxxx   x  ',
-      ' xxxxxx             x  ',
-      '      x!!!!!!!!!!!!!x  ',
-      '      xxxxxxxxxxxxxxx  ',
-      '                       '
-    ],
-
-    [
-      '     v      v                 |    v  v    v     ',
-      '                 o       =                       ',
-      '                 x                               ',
-      '               =       o            o            ',
-      '         o             x            x   =        ',
-      ' |       x                                   o   ',
-      ' o                  o          o    =   x    x   ',
-      ' x                  x          x                 ',
-      ' x          o o  =  x                x           ',
-      ' x  @       xxxxx   x       o           =        ',
-      ' xxxxxx                     x                    ',
-      '      x!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!x   ',
-      '      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx   ',
-      '                                                 '
-    ],
-    
-];
-
-const parser = new LevelParser(actorDict);
-  runGame(levels,parser,DOMDisplay)
-  .then(() => alert('Вы выиграли приз!'));
-
-*/
-
 const parser = new LevelParser(actorDict);
 
 loadLevels().then(levelsStr => {
-  let levels = JSON.parse(levelsStr);
+  const levels = JSON.parse(levelsStr);
   return runGame(levels, parser, DOMDisplay);
 }).then(() => {
   alert('Ты крут =) Победа твоя!')
